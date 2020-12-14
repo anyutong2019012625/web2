@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./html7.css" />
+</head>
+<body>
+	<div id="one">
+		<p id="timer"></p>
+	</div>
+	<div id="two">
+	<div class="header clear">
+	<div class="header-top clear">
+		<div class="logo">
+			<p>美妆推荐</p>
+		</div>
+		<form class="form clear">
+		<input type="text" placeholder="网红美妆" class="search" />
+		<input type="button" class="submit" />
+		</form>
+			<ul class="my">
+				<li><a href="#">个人中心</a></li>
+			</ul>
+	</div>
+	<div class="header-bottom clear">
+		<ul class="nav clear">
+			<li class="first"><a href="#">首页</a></li>
+			<li><a href="#">粉底</a></li>
+			<li><a href="#">眼影</a></li>
+			<li><a href="#">遮瑕</a></li>
+			<li><a href="#">口红</a></li>
+			<li class="last"><a href="#">腮红</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="banner">
+		<div class="imgBox" id="imgBox">
+			<img src="./imgs/2-1Q0251632370-L.jpg" alt=" " class="banner-box" onclick="tan()" />
+		</div>
+		<div class="boy">
+			<h3>点击图片</h3>
+		</div>
+	</div>
+	<ul class="new">
+		<li class="first"><a href="#">最新产品</a></li>
+	</ul>
+	<div class="middle">
+		<ul class="pt clear">
+		<li><img src="./imgs/1106650937.jpg" onclick="jumpToTaobao()">
+			<div class="money">
+				<h3>兰蔻护肤套装</h3>
+				<p>￥598</p>
+			</div>
+		</li>
+		<li><img src="./imgs/1698765914.jpg" onclick="jumpToTaobao()">
+			<div class="money">
+				<h3>红胖子</h3>
+				<p>￥269</p>
+			</div>
+		</li>
+		<li><img src="./imgs/732157171.jpg" onclick="jumpToTaobao()">
+			<div class="money">
+				<h3>CD气垫</h3>
+				<p>￥373</p>
+			</div>
+		</li>
+		<li><img src="./imgs/-71979790.jpg" onclick="jumpToTaobao()">
+			<div class="money">
+				<h3>完美日记 锦鲤盘</h3>
+				<p>￥130</p>
+			</div>
+		</li>
+		</ul>
+	</div>
+	<ul class="new">
+		<li class="first"><a href="#">精致妆容</a></li>
+	</ul>
+	<div class="zhungrong ">
+		<ul class="ph clear">
+			<li><img src="./imgs/XHS_15914369564895c05e4b4-5c04-33cf-9775-5986752e.jpg" class="one"></li>
+			<li><img src="./imgs/XHS_15914379958044fe0751e-ddda-3282-8001-d1384085.jpg"></li>
+			<li><img src="./imgs/XHS_15914381191588baea768-36b4-3087-b405-e73b78e6.jpg"></li> 
+	</ul>
+	<ul class="text clear">
+		<li class="jieshao clear">
+			<div class="introduce">
+				<ul>
+					<li>
+						<div class="name"><p> 甜美妆</p></div>
+					</li>
+				</ul>
+			</div>
+		<li>
+			<div class="introduce">
+				<ul>
+					<li>
+						<div class="name"><p>港风妆</p></div>
+					</li>
+				</ul>
+			</div>
+		</li> 
+		<li>
+			<div class="introduce">
+				<ul>
+					<li>
+						<div class="name"><p>欧美妆</p></div>
+					</li>
+				</ul>
+			</div>
+		</li> 
+		</li>
+	</ul>
+	</div>
+	<div class="z"><p>AYT公司， 2019-2020版权所有</p></div>
+	</div>
+</body>
+<script>
+	function time(){
+		document.getElementById("two").style.display="none";
+		var timer=document.getElementById("timer");//获取元素
+		var num=5;
+		var str="";
+		var setIntervalId=setInterval(function(){
+			str=num+"s后精彩开始！";
+			if(num==0){
+				clearInterval(setIntervalId);//倒计时结束后
+				document.getElementById("one").style.display="none";
+				document.getElementById("two").style.display="block";
+			}
+			timer.innerHTML=str;
+			num=num-1;
+		}
+		,1000)
+	}
+	time();
+	function tan(){
+		alert("点击最新产品中的图片可以跳转淘宝链接，买买买！！");
+	}
+	function jumpToTaobao(){
+		window.open("https://uland.taobao.com/sem/tbsearch?refpid=mm_26632360_8858797_29866178&keyword=%E7%BE%8E%E5%A6%86&clk1=15378c672906d75344bdc15465306717&upsId=15378c672906d75344bdc15465306717","淘宝美妆","width：800px,height:800px");
+	}
+
+</script>
+</html>
